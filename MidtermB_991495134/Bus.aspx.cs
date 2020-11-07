@@ -13,5 +13,15 @@ namespace MidtermB_991495134
         {
 
         }
+
+        protected void btnInsert_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AddBus.aspx");
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Seat.aspx");
+        }
     }
 }

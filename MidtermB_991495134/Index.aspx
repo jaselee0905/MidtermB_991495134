@@ -17,7 +17,7 @@
     <div>
         Your Id: 991495134
     </div>
-        <asp:Button ID="btnBus" runat="server" OnClick="Button1_Click" Text="Bus" style="width:10%"/>
+        <asp:Button ID="btnBus" runat="server" OnClick="btnBus_Click" Text="Bus" style="width:10%"/>
 &nbsp;&nbsp;
         <asp:Button ID="btnTour" runat="server" Text="Tour" OnClick="btnTour_Click" style="width:10%"/>
     </form>

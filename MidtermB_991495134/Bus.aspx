@@ -10,14 +10,15 @@
     <form id="form1" runat="server">
         <div>
         </div>
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridView1" runat="server" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1">
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
                 <asp:BoundField DataField="Id" HeaderText="Id" ReadOnly="True" SortExpression="Id" />
                 <asp:BoundField DataField="Class" HeaderText="Class" SortExpression="Class" />
                 <asp:BoundField DataField="SeatCount" HeaderText="SeatCount" SortExpression="SeatCount" />
             </Columns>
         </asp:GridView>
+        <asp:Button ID="btnInsert" runat="server" Text="Insert" Style="width:10%" OnClick="btnInsert_Click"/>
+        <asp:Button ID="btnSearch" runat="server" Text="Search"  Style="width:10%" OnClick="btnSearch_Click"/>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [Bus] WHERE [Id] = @Id" InsertCommand="INSERT INTO [Bus] ([Id], [Class], [SeatCount]) VALUES (@Id, @Class, @SeatCount)" SelectCommand="SELECT * FROM [Bus]" UpdateCommand="UPDATE [Bus] SET [Class] = @Class, [SeatCount] = @SeatCount WHERE [Id] = @Id">
             <DeleteParameters>
                 <asp:Parameter Name="Id" Type="Int32" />
